@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { AgChartsReact } from "ag-charts-react";
+
+const options = {
+  data: [
+    { label: 'Other', share: 5 },
+    { label: 'USA', share: 25 },
+    { label: 'UK', share: 20 },
+    { label: 'India', share: 50 },
+  ],
+  series: [
+    {
+      type: 'pie',
+      labelKey: 'label',
+      angleKey: 'share',
+      innerRadiusOffset: -30,
+    },
+  ],
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AgChartsReact options={options} />
     </div>
   );
 }
