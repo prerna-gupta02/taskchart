@@ -1,13 +1,16 @@
-.ag-chart-wrapper{
-  width: 50% !important;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+@media screen and (min-width: 890px) {
+  .recharts-wrapper{
+    width: 70% !important;
+  }
 }
 
-@media screen and (max-width: 650px) {
-  .ag-chart-wrapper{
-    width: 100% !important;
+@media screen and (max-width: 345px) {
+  .recharts-wrapper{
+    display: flex;
+    justify-content: space-around;
+  }
+  .recharts-wrapper > svg{
+    width: 210px !important;
+    overflow: visible !important;
   }
 }
